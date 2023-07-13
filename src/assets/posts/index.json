@@ -1,0 +1,25 @@
+[
+        {
+            "id": "20230713-hello-world",
+            "title": "Hello World",
+            "category":"general",
+            "tags":[
+                "helloworld",
+                "bacon",
+                "loremipsum"
+            ]
+        },
+        {
+            "id": "20230713-blog-design",
+            "title": "Designing a Blog",
+            "category":"tech",
+            "tags":[
+                "tech",
+                "web",
+                "design",
+                "angular",
+                "clarity"
+            ]
+        }
+
+    ]

@@ -1,0 +1,24 @@
+<clr-vertical-nav [clrVerticalNavCollapsible]="clrVerticalNavCollapsible"
+[clrVerticalNavCollapsed]="clrVerticalNavCollapsed"
+(clrVerticalNavCollapsedChange)="clrVerticalNavCollapsedChange($event)"
+style="order:1">
+    <a *ngFor="let article of this.posts; let idx = index" 
+    clrVerticalNavLink
+    [routerLink]="'/blog/post/' + article.id" routerLinkActive="active" (click)="this.changePost(article.id)">
+    {{article.title}}
+    </a>
+</clr-vertical-nav>
+<ng-template [ngIf]="this._isIndex" [ngIfElse]="_post">
+    <div class="content-area">
+        <div style="padding:100px;">
+            <div *ngFor="let article of this.posts; let idx = index"></div>
+        </div>
+        <app-footer></app-footer>
+    </div>
+</ng-template>
+<ng-template #_post>
+    <div class="content-area">
+        <div style="padding:100px" markdown [src]="post"></div>
+        <app-footer></app-footer>
+    </div>
+</ng-template>

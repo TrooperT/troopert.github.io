@@ -1,0 +1,15 @@
+/* You can add global styles to this file, and also import other style files */
+app-blog {
+    flex: 1 1 auto;
+    display: flex;
+}
+
+app-footer {
+    position: sticky;
+    bottom: 0;
+}
+
+app-footer p {
+    padding-top: 3rem;
+    text-align: center;
+}
